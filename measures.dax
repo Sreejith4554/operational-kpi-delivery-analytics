@@ -1,0 +1,35 @@
+Milestone Variance Days =
+DATEDIFF(
+    MAX(Portfolio[baseline_finish]),
+    MAX(Portfolio[forecast_finish]),
+    DAY
+)
+
+On Time Projects =
+CALCULATE(
+    DISTINCTCOUNT(Portfolio[project_id]),
+    FILTER(Portfolio, Portfolio[forecast_finish] <= Portfolio[baseline_finish])
+)
+
+On Time Rate =
+DIVIDE([On Time Projects], DISTINCTCOUNT(Portfolio[project_id]), 0)
+
+Budget Variance % =
+DIVIDE(
+    SUM(Portfolio[actual_cost]) - SUM(Portfolio[planned_cost]),
+    SUM(Portfolio[planned_cost]),
+    0
+)
+
+High Risk Open Items =
+CALCULATE(
+    COUNTROWS(RAID),
+    RAID[status] = "Open",
+    RAID[severity] IN {"High", "Critical"}
+)
+
+Red Projects =
+CALCULATE(
+    DISTINCTCOUNT(Portfolio[project_id]),
+    Portfolio[rag_status] = "Red"
+)

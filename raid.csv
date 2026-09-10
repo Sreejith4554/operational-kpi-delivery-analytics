@@ -1,0 +1,9 @@
+raid_id,project_id,type,severity,status,summary,owner,due_date
+R-001,PRJ-001,Risk,High,Open,Integration testing window compressed,Integration Lead,2026-09-12
+I-002,PRJ-004,Issue,Critical,Open,Source data defects exceed threshold,Data Lead,2026-09-11
+A-003,PRJ-003,Action,Medium,Open,Confirm legal wording for onboarding step,Process Owner,2026-09-13
+D-004,PRJ-006,Dependency,High,Open,SSO configuration from identity team,IT Lead,2026-09-18
+R-005,PRJ-008,Risk,High,Open,Evidence owners not confirmed,Compliance Lead,2026-09-14
+I-006,PRJ-012,Issue,Medium,Open,Notification channel mapping incomplete,Automation Lead,2026-09-17
+A-007,PRJ-007,Action,Low,Closed,Approve weekly PMO template,PMO Lead,2026-09-05
+D-008,PRJ-010,Dependency,High,Open,Data steward nominations pending,Business Lead,2026-09-20
